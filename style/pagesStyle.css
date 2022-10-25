@@ -1,0 +1,321 @@
+/* selecting all HTML elements on page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #efefef;
+  color: #787373;
+  /* This is the fixed font for all pages in this repo */
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+h3,
+h1,
+h2 {
+  color: #ff3b3f;
+}
+p {
+  font-size: 18px;
+}
+
+/* Navigation Bar */
+.navigationBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+.navigationBar li {
+  float: right;
+  display: flex;
+}
+
+.navigationBar li a {
+  display: block;
+  color: #787373;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navigationBar li a:hover {
+  color: #ff3b3f;
+}
+
+/* skills.html */
+/* keeping the headings for each page the same */
+#skills,
+#experience,
+#education {
+  text-align: center;
+  padding: 20px;
+}
+
+#skills h1,
+#education h1,
+#experience h1 {
+  color: #ff3b3f;
+  font-size: 25px;
+}
+
+/* want to display skills it in a CSS table */
+table {
+  table-layout: fixed;
+  width: 500px;
+  border-spacing: 7px;
+}
+.skill-list,
+.project-list {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* each table data cell -> td */
+.skill-list tr td {
+  padding: 2px;
+  list-style: none;
+  text-decoration: none; /* removes bullets from list */
+  text-align: center;
+  background-color: #caebf2;
+  color: #ff3b3f;
+  border-radius: 10px;
+  border: solid 0.5px white;
+  box-shadow: 2px 2px 15px -2px rgb(50, 50, 50);
+}
+/* only image tag is on the skills page */
+img {
+  border-radius: 10px;
+}
+
+/* A pulse effect when a data cell is hovered over, using keyframes */
+.skill-list tr td:hover {
+  /* calling the pule keyframe created below. Infinite */
+  animation: pulse 1s infinite;
+  animation-timing-function: linear;
+}
+
+/* keyframes controls CSS animation by defining styles. You can control transitions and animations */
+@keyframes pulse {
+  /* declaring a keyframe named pulse, it will have 3 selectors */
+  /* selector 1 */
+  0% {
+    transform: scale(1); /* scale will allow shrink/grow transformation */
+  }
+  /* selector 2 */
+  50% {
+    transform: scale(1.1);
+    /* selector 3 */
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+/* education.html */
+#education,
+#experience {
+  text-align: center;
+  margin: auto;
+}
+/* Timeline Container */
+.timeline-center {
+  width: 550px;
+  margin: auto;
+}
+
+.timeline {
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 10px;
+}
+
+/* Outer Layer with the timeline border */
+.outer {
+  border-left: 2px solid #333;
+  text-align: center;
+}
+
+/* Card container */
+.card {
+  position: relative;
+  margin: 0 0 20px 20px;
+  padding: 10px;
+  background: #caebf2;
+  color: rgba(0, 0, 0, 0.745);
+  border-radius: 8px; /* round the edges */
+  max-width: 500px;
+  border: solid 0.5px white;
+  box-shadow: 2px 2px 15px -2px rgb(50, 50, 50);
+}
+
+/* Data in the timeline */
+.info {
+  display: flex;
+  flex-direction: column; /* How items are placed within class */
+  gap: 10px;
+}
+
+/* Title of the card */
+.title {
+  color: #787373;
+  position: relative;
+  font-size: 20px;
+}
+
+.date-title {
+  font-size: 18px;
+  color: #ff3b3f;
+}
+
+/* Timeline dot  */
+/* using pseudo-element. ::before specifies the first child of the selected element */
+.title::before {
+  content: "";
+  position: absolute; /* html element cant move on page */
+  width: 10px;
+  height: 10px;
+  background: #ff3b3f;
+  border-radius: 999px; /* creating a small circle */
+  left: -39px; /* left margin, bring the card closer to dot  */
+  border: 3px solid #787373; /* circle border around dot on timeline */
+}
+
+/* Class project */
+.info-border {
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 15px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 2px 2px 15px -2px rgb(50, 50, 50);
+}
+.info-border h2 a:visited {
+  color: #ff3b3f;
+}
+
+/* Projects Table */
+.project-list {
+  width: 80%;
+}
+/* project table data cells */
+.project-list tr td {
+  background-color: #caebf2;
+  padding: 20px;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+.project-list a {
+  text-decoration: none;
+  color: #787373;
+}
+.project-list a:hover {
+  font-weight: bold;
+}
+.project-list a:visited {
+  color: #787373;
+}
+
+/* Experience page */
+.linkedin-article a {
+  text-decoration: none;
+  color: #787373;
+}
+.linkedin-article a:hover {
+  color: #ff3b3f;
+}
+
+/* Contact Page */
+.contact-title {
+  text-align: center;
+  padding: 20px;
+}
+.contact-title h1 {
+  font-size: 25px;
+}
+
+/* contact form */
+input[type="text"], /* selector for input tag with type text*/
+select,
+textarea {
+  width: 100%;
+  padding: 12px; /* Some padding */
+  border: 1px solid #787373; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical; /* Allow the user to vertically resize the textarea */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: #ff3b3f;
+  color: rgba(0, 0, 0, 0.745);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  color: white;
+}
+
+/* Add a background color and some padding around the form */
+.contact-form {
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* Icon Bar */
+.icon-bar {
+  background-color: #ff3b3f;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-bottom-left-radius: 5px; /* So that it matches the rounding of the form container */
+  border-bottom-right-radius: 5px;
+}
+
+.icons {
+  align-items: center;
+}
+
+.icons ul {
+  position: relative;
+  display: block;
+  text-align: center;
+  list-style: none;
+}
+
+.icons ul li {
+  padding: 20px;
+  width: auto;
+  display: inline;
+}
+/* font awesome icons */
+.icons ul li i {
+  color: rgba(0, 0, 0, 0.745);
+  padding: 30px;
+}
+
+.icons ul li i:hover {
+  color: white;
+}
+
+/* Extra CSS for spans */
+.red-effect {
+  color: #ff3b3f;
+  font-weight: bold;
+}

@@ -1,0 +1,211 @@
+/* selecting all HTML elements -> * */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #787373;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #efefef;
+}
+
+h3,
+h1,
+h2 {
+  color: #ff3b3f;
+}
+
+/* All <p> will have 18 font */
+p {
+  font-size: 18px;
+}
+
+/* Introduction with picture and Name */
+.center-img,
+.center-txt {
+  display: inline-block;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #caebf2;
+  font-size: 25px;
+}
+
+.intro-border {
+  width: 100%;
+  padding: 20px;
+}
+
+img {
+  margin: 35px;
+  border-radius: 50%;
+}
+/* adjusting font awesome error to stay at the bottom of the into div */
+.arrow-font-awesome {
+  color: #ff3b3f;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 40px;
+}
+/* type write effect */
+.typewrite,
+.grey-effect {
+  text-decoration: none;
+  color: #787373;
+  font-size: 26pt;
+}
+/* Navigation Bar */
+
+#navbar {
+  position: fixed; /* Make it stick/fixed */
+  top: -50px; /* Hide the navbar 50 px outside of the top view */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+.navigationBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+.navigationBar li {
+  float: right;
+  display: flex;
+}
+
+.navigationBar li a {
+  display: block;
+  color: #787373;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navigationBar li a:hover {
+  color: #ff3b3f;
+}
+
+/* About Me Section */
+
+.about-me-border {
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 15px;
+  padding: 20px;
+  height: 100;
+  background-color: white;
+  float: left;
+  box-shadow: 2px 2px 15px -2px rgb(50, 50, 50);
+}
+
+.about-me-title h2 {
+  font-size: 35px;
+  color: #ff3b3f;
+}
+
+.about-me-title h3 {
+  color: #787373;
+  letter-spacing: 2px;
+  font-size: 25px;
+}
+
+.about-me-title {
+  display: block;
+  padding: 20px;
+}
+/* download resume button */
+.resume-btn {
+  font-size: 15px;
+  padding: 5px;
+  background-color: #ff3b3f;
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+}
+/* when you hover over the link */
+.resume-btn a:hover {
+  color: white;
+}
+.resume-btn a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.745);
+}
+
+/* List of fast contact information */
+.contact-info {
+  /* align entire list in the center */
+  text-align: center;
+}
+
+.contact-info ul {
+  /* align text to left */
+  text-align: left;
+  display: inline-block;
+  /* inline block allows us to use column selectors */
+  /* splitting list into 2 columns */
+  column-count: 2;
+  column-gap: 60px;
+}
+
+.contact-info ul li {
+  /* removing the bullets from a list */
+  list-style: none;
+  padding: 10px;
+}
+
+/* paragraph description of self */
+.about-me-description {
+  float: left;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Hobby List */
+.about-me-hobbies {
+  float: left;
+}
+
+.hobby-title {
+  padding: 20px;
+  float: left;
+  text-decoration: none;
+  color: #ff3b3f;
+}
+
+/* displaying list in CSS grid */
+.hobby-list {
+  display: grid;
+  /* create 4 column, 1 fraction unit each */
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+.hobby-list li {
+  list-style: none;
+}
+/* emojis in the grid, make them bigger. Special HTML character*/
+.emoji {
+  font-size: 30px;
+}
+
+/* Extra CSS for spanning */
+.red-effect {
+  color: #ff3b3f;
+  font-weight: bold;
+}

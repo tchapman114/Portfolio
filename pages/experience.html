@@ -6,33 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tara Chapman | Software Developer</title>
     <!-- Add a favicon -->
-    <link rel="icon" href="../media/images/luke.jpeg" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="../media/img/icons8-developer-64.png"
+      type="image/x-icon"
+    />
+    <!-- CSS link -->
+    <link rel="stylesheet" href="../style/pagesStyle.css" />
+    <!-- font awesome for icons -->
+    <script
+      src="https://kit.fontawesome.com/6df7609479.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
-      <nav>
-        <menu>
-          <ul>
-            <li><a href="../index.html">About</a></li>
-            <li><a href="./education.html">Education</a></li>
-            <li><a href="./skills.html">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-          </ul>
-        </menu>
+      <!-- Navigation Bar -->
+      <nav class="navigationBar">
+        <ul>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./skills.html">Skills</a></li>
+          <li><a href="./education.html">Education</a></li>
+          <li><a href="./experience.html">Experience</a></li>
+          <li><a href="../index.html">About</a></li>
+        </ul>
       </nav>
     </header>
+    <!-- Title Section with brief intro -->
+    <div id="experience">
+      <div class="experience-title">
+        <h1>Work Experience</h1>
+        <br />
+        <p>
+          <!-- using span to help create a more visually appealing site -->
+          Here is my relevant work
+          <span class="red-effect">experience</span> and
+          <span class="red-effect">skills</span> I have gained in these
+          positions:
+        </p>
+      </div>
+    </div>
 
-    <section id="experience">
-      <h1>Experience</h1>
-    </section>
-
-    <section>
-      <h2>Work Experience</h2>
-    </section>
-
-    <section>
-      <h2>Projects</h2>
-    </section>
+    <!-- Start of timeline -->
+    <div class="timeline-center">
+      <div class="timeline">
+        <div class="outer">
+          <!-- First Card -->
+          <div class="card">
+            <div class="info">
+              <h2 class="title">
+                365 Retail Markets - Software Developer Intern, API Team
+              </h2>
+              <h3 class="date-title">June 2022-Present</h3>
+              <p>
+                Practiced Skills: AWS, Azure, Kotlin, Postman, SQL, Groovy,
+                Gradle
+              </p>
+            </div>
+          </div>
+          <!-- Second Card -->
+          <div class="card">
+            <div class="info">
+              <h2 class="title">
+                365 Retail Markets - Software Engineer Intern
+              </h2>
+              <h3 class="date-title">March 2022-June 2022</h3>
+              <p>
+                Practiced Skills: Java, JavaScript, TypeScript, Handlebars,
+                React, Agile, IntelliJ, Git, Github, Confluence, Jira, Sumo
+                Logic
+              </p>
+              <p class="linkedin-article">
+                <a
+                  href="https://www.linkedin.com/pulse/first-internship-my-experience-software-developer-intern-tara-chapman/"
+                  ><i class="fa-brands fa-linkedin fa-lg"></i> Check out this
+                  LinkedIn article I wrote. It is about my first internship!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
