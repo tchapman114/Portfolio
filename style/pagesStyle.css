@@ -242,6 +242,9 @@ img {
 }
 
 /* contact form */
+.contact-form {
+  height: 500px;
+}
 input[type="text"], /* selector for input tag with type text*/
 select,
 textarea {
@@ -252,7 +255,10 @@ textarea {
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 6px;
   margin-bottom: 16px;
-  resize: vertical; /* Allow the user to vertically resize the textarea */
+  resize: inherit; /* Not resizable by the user */
+}
+textarea {
+  height: 200px; /* adjusting the hight of the text box */
 }
 
 /* Style the submit button with a specific background color etc */
