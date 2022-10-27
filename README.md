@@ -1,4 +1,4 @@
-# Portfolio
+# Portfolio - Tara Chapman
 Check out my portfolio website here! https://tchapman114.github.io/Portfolio/ 
 
 Flow diagram describing the application's functionality:
