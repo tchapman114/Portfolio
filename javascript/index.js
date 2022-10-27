@@ -1,17 +1,20 @@
 // Navigation bar on index.html. Navbar will appear once user scrolls
-window.onscroll = function () {
-  scrollFunction();
-};
-
+// function that updates the navigation bar display
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navbar").style.top = "0";
+    //navbar is the ID of the navigation bar. First we must grab the element
+    document.getElementById("navbar").style.top = "0"; //Display navigation bar
   } else {
-    document.getElementById("navbar").style.top = "-50px";
+    document.getElementById("navbar").style.top = "-50px"; //hide navigation bar
   }
 }
+//listen for scroll event
+window.onscroll = function () {
+  scrollFunction(); //when the window is scrolled, call the function that updates the navigation bar display
+};
 
-//type writer effect
+//type writer effect on index.html
+// initialize the values and store in TxtType
 var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
@@ -27,8 +30,10 @@ TxtType.prototype.tick = function () {
   var fullTxt = this.toRotate[i];
 
   if (this.isDeleting) {
+    //full max of text in array
     this.txt = fullTxt.substring(0, this.txt.length - 1);
   } else {
+    //continue typing text in array
     this.txt = fullTxt.substring(0, this.txt.length + 1);
   }
 
@@ -43,10 +48,10 @@ TxtType.prototype.tick = function () {
 
   if (!this.isDeleting && this.txt === fullTxt) {
     delta = this.period;
-    this.isDeleting = true;
+    this.isDeleting = true; //set to true, reached the length of the element in array
   } else if (this.isDeleting && this.txt === "") {
     this.isDeleting = false;
-    this.loopNum++;
+    this.loopNum++; //keep incrementing in array
     delta = 500;
   }
 
@@ -55,10 +60,11 @@ TxtType.prototype.tick = function () {
   }, delta);
 };
 
+// event listener, when the window loads
 window.onload = function () {
-  // 1. grab the html element. Class = "typewrtie"
+  // 1. grab the html element. Class = "typewrite"
   var elements = document.getElementsByClassName("typewrite");
-  // for loop to get the data-type and data-period anchor tag attriute
+  // for loop to get the data-type and data-period anchor tag attribute
   for (var i = 0; i < elements.length; i++) {
     var toRotate = elements[i].getAttribute("data-type");
     var period = elements[i].getAttribute("data-period");
@@ -66,7 +72,7 @@ window.onload = function () {
       new TxtType(elements[i], JSON.parse(toRotate), period);
     }
   }
-  // INJECT CSS
+  // CSS
   var css = document.createElement("style");
   css.type = "text/css";
   // css for the line at the end of the typing effect
